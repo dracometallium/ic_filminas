@@ -12,6 +12,8 @@
 
 \usepackage{caption} %Para captions en las figuras sin prefijo
 
+\usepackage{ccicons}
+
 \usepackage{url}
 
 \usepackage{babelbib}
@@ -69,7 +71,7 @@
     \begin{figure}
     \includegraphics[height=0.65\textheight]{img/ibm-pc-5150.jpg}
         \captionsetup{textfont=tiny,labelformat=empty}
-        \caption{IBM PC 5150: \url{https://commons.wikimedia.org/wiki/File:Ibm\_pc\_5150.jpg} (CC BY-SA 3.0)}
+        \caption{IBM PC 5150 \ccbysa\cite{ibm-pc-5150}}
     \end{figure}
 
 \end{frame}
@@ -112,7 +114,7 @@
     \begin{figure}
         \includegraphics[width=0.5\textwidth]{img/anticitera.jpg}
         \captionsetup{textfont=tiny,labelformat=empty}
-        \caption{\tiny{\url{https://commons.wikimedia.org/wiki/File:NAMA\_Machine\_d\%27Anticyth\%C3\%A8re\_1.jpg} (CC BY-SA 3.0)}}
+        \caption{\ccbysa\cite{anticitera}}
     \end{figure}
 
 
@@ -341,8 +343,7 @@
 \begin{figure}
     \includegraphics[width=0.9\textwidth]{img/pdp1.jpg}
     \captionsetup{textfont=tiny,labelformat=empty}
-    \caption{\url{https://commons.wikimedia.org/wiki/File:DEC\_PDP-1\_Demo\_Lab\_at\_Mountain\_View\%27s\_Computer\_History\_Museum.jpg}
-        (CC BY-SA 4.0)}
+    \caption{\ccbysa\cite{pdp1}}
 \end{figure}
 
 \end{frame}
@@ -390,7 +391,7 @@
 \begin{figure}
     \includegraphics[width=1.0\textwidth]{img/4026-chip.png}
     \captionsetup{textfont=tiny,labelformat=empty}
-    \caption{\url{https://commons.wikimedia.org/wiki/File:4026-chip.png} (CC BY-SA 2.5)}
+    \caption{\ccbysa\cite{4026-chip}}
 \end{figure}
 \end{minipage}
 
@@ -410,8 +411,7 @@
 \begin{figure}
     \includegraphics[height=0.5\textheight]{img/intelC4004.jpg}
     \captionsetup{textfont=tiny,labelformat=empty}
-    \caption{\url{https://commons.wikimedia.org/wiki/File:Intel\_C4004.jpg}
-        (CC BY-SA 4.0)}
+    \caption{\ccbysa\cite{intelC4004}}
 \end{figure}
 
 \end{frame}
@@ -476,6 +476,15 @@
 
 \end{frame}
 
-%\setcounter{page}{134}
+\begin{frame}%[allowframebreaks]
+
+\frametitle{Atribuciones}
+
+\bibliographystyle{abbrv}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\tiny
+\bibliography{refimg}
+\end{frame}
+%\setcounter{page}{130}
 
 \end{document}

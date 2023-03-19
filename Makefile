@@ -5,6 +5,7 @@ LOGOS:=$(wildcard logos/*.svg)
 FIGURAS:=$(wildcard img/*.svg)
 FIGURAS_NPDF:=$(wildcard img/*.png img/*.jpg)
 CODIGO=
+BIB=refimg.bib
 LOGOS_PDF=$(LOGOS:.svg=.pdf)
 FIGURAS_PDF=$(FIGURAS:.svg=.pdf)
 CODIGO_PDF=$(CODIGO:.c=.pdf)
@@ -14,7 +15,10 @@ GARBAGE=*.aux *.bbl *.blg *.log *.toc *.lof *.nav *.out *.snm
 
 all: $(TEX_PDF)
 
-$(TEX_PDF): %.pdf : %.tex $(PDF) $(NPDF)
+$(TEX_PDF): %.pdf : %.tex $(PDF) $(NPDF) $(BIB)
+	rm -f *.lof
+	pdflatex -interaction=nonstopmode -halt-on-error $<
+	bibtex $(<:.tex=.aux) || true
 	pdflatex -interaction=nonstopmode -halt-on-error $<
 	pdflatex -interaction=nonstopmode -halt-on-error $<
 
