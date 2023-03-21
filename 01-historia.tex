@@ -473,8 +473,10 @@
 
 \title{¿Consultas?}
 \maketitle
-
 \end{frame}
+
+\newcounter{lastPage}
+\setcounter{lastPage}{\number\value{page}}
 
 \begin{frame}%[allowframebreaks]
 
@@ -485,6 +487,7 @@
 \tiny
 \bibliography{refimg}
 \end{frame}
-%\setcounter{page}{130}
+
+\setcounter{page}{\number\value{lastPage}}
 
 \end{document}

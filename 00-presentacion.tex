@@ -377,6 +377,9 @@ Si no se tiene la materia cursada, ni se esta cursando:
 
 \end{frame}
 
+\newcounter{lastPage}
+\setcounter{lastPage}{\number\value{page}}
+
 \begin{frame}%[allowframebreaks]
 
 \frametitle{Atribuciones}
@@ -387,6 +390,6 @@ Si no se tiene la materia cursada, ni se esta cursando:
 \bibliography{refimg}
 \end{frame}
 
-%\setcounter{page}{134}
+\setcounter{page}{\number\value{lastPage}}
 
 \end{document}
