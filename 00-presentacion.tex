@@ -12,6 +12,8 @@
 
 \usepackage{caption} %Para captions en las figuras sin prefijo
 
+\usepackage{ccicons}
+
 \usepackage{url}
 
 \usepackage{babelbib}
@@ -68,8 +70,7 @@
     \begin{figure}
     \includegraphics[height=0.65\textheight]{img/ckitten.jpg}
         \captionsetup{textfont=tiny,labelformat=empty}
-        \caption{Tim Bartel:
-        \url{https://commons.wikimedia.org/wiki/File:Computer-kitten.jpg} (CC BY-SA 3.0)}
+        \caption{\ccbysa\cite{ckitten}}
     \end{figure}
 
 \end{frame}
@@ -374,11 +375,16 @@ Si no se tiene la materia cursada, ni se esta cursando:
 \title{¿Consultas?}
 \maketitle
 
+\end{frame}
+
+\begin{frame}%[allowframebreaks]
+
+\frametitle{Atribuciones}
+
 \bibliographystyle{abbrv}
 \setbeamertemplate{bibliography item}{\insertbiblabel}
 \tiny
 \bibliography{refimg}
-
 \end{frame}
 
 %\setcounter{page}{134}
