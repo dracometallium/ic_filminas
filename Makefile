@@ -16,7 +16,7 @@ GARBAGE=*.aux *.bbl *.blg *.log *.toc *.lof *.nav *.out *.snm
 all: $(TEX_PDF)
 
 $(TEX_PDF): %.pdf : %.tex $(PDF) $(NPDF) $(BIB)
-	rm -f *.lof
+	rm -f $(<:.tex=.lof)
 	pdflatex -interaction=nonstopmode -halt-on-error $<
 	bibtex $(<:.tex=.aux) || true
 	pdflatex -interaction=nonstopmode -halt-on-error $<
@@ -65,4 +65,4 @@ help:
 	@echo - Shows this help
 
 resize:
-	mogrify -verbose -resize "1080x>" $(NPDF)
+	./misc/resize.sh $(NPDF)
