@@ -4,10 +4,12 @@ AUX=$(TEX:.tex=.aux)
 LOGOS:=$(wildcard logos/*.svg)
 FIGURAS:=$(wildcard img/*.svg)
 FIGURAS_NPDF:=$(wildcard img/*.png img/*.jpg)
+ANIMATION:=$(wildcard ani/*.svg)
 CODIGO=
 BIB=refimg.bib
 LOGOS_PDF=$(LOGOS:.svg=.pdf)
 FIGURAS_PDF=$(FIGURAS:.svg=.pdf)
+ANIMATION_DONE:=$(ANIMATION:.svg=.done)
 CODIGO_PDF=$(CODIGO:.c=.pdf)
 PDF=$(FIGURAS_PDF) $(CODIGO_PDF) $(LOGOS_PDF)
 NPDF=$(FIGURAS_NPDF)
@@ -15,11 +17,10 @@ GARBAGE=*.aux *.bbl *.blg *.log *.toc *.lof *.nav *.out *.snm
 
 all: $(TEX_PDF)
 
-$(TEX_PDF): %.pdf : %.tex $(PDF) $(NPDF) $(BIB)
+$(TEX_PDF): %.pdf : %.tex $(PDF) $(NPDF) $(BIB) $(ANIMATION_DONE)
 	rm -f $(<:.tex=.lof)
 	pdflatex -interaction=nonstopmode -halt-on-error $<
 	bibtex $(<:.tex=.aux) || true
-	pdflatex -interaction=nonstopmode -halt-on-error $<
 	pdflatex -interaction=nonstopmode -halt-on-error $<
 
 $(FIGURAS_PDF): %.pdf : %.svg
@@ -42,9 +43,13 @@ $(CODIGO_PDF): %.pdf :%.c
 		| inkscape --shell
 	rm $(<:.cpp=.ps)
 
+$(ANIMATION_DONE): %.done : %.svg
+	./misc/frames.sh $^
+	touch $@
+
 clean:
 	rm -f $(GARBAGE)
-	rm -f $(PDF) $(DATOS) $(TEX_PDF)
+	rm -f $(PDF) $(DATOS) $(TEX_PDF) ani/*.pdf $(ANIMATION_DONE)
 
 clean-garbage:
 	rm -f $(GARBAGE)
