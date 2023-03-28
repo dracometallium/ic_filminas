@@ -22,6 +22,7 @@ $(TEX_PDF): %.pdf : %.tex $(PDF) $(NPDF) $(BIB) $(ANIMATION_DONE)
 	pdflatex -interaction=nonstopmode -halt-on-error $<
 	bibtex $(<:.tex=.aux) || true
 	pdflatex -interaction=nonstopmode -halt-on-error $<
+	pdflatex -interaction=nonstopmode -halt-on-error $<
 
 $(FIGURAS_PDF): %.pdf : %.svg
 	DISPLAY="" inkscape $^ --batch-process --export-area-page -o $@
