@@ -25,22 +25,34 @@ $(TEX_PDF): %.pdf : %.tex $(PDF) $(NPDF) $(BIB) $(ANIMATION_DONE)
 	pdflatex -interaction=nonstopmode -halt-on-error $<
 
 $(FIGURAS_PDF): %.pdf : %.svg
-	DISPLAY="" inkscape $^ --batch-process --export-area-page -o $@
+	printf "file-open:%s;\
+		export-area-page;\
+		export-filename:%s;\
+		export-overwrite;\
+		export-do;" $^ $@\
+		| inkscape --shell
 
 $(LOGOS_PDF): %.pdf : %.svg
-	DISPLAY="" inkscape $^ --batch-process --export-area-drawing -o $@
+	printf "file-open:%s;\
+		export-area-drawing;\
+		export-filename:%s;\
+		export-overwrite;\
+		export-do;" $^ $@\
+		| inkscape --shell
 
 $(CODIGO_PDF): %.pdf :%.c
-	echo ":set syntax \n\
-	:set number \n\
-	:set printfont=currier:8 \n\
-	:set printoptions=number:y,header:0 \n\
-	:colorscheme default \n\
-	:hardcopy > "$(<:.cpp=.ps) "\n:q\n" | vim $<
-	echo "file-open:$(<:.cpp=.ps);\
+	printf ":set syntax \n\
+		:set number \n\
+		:set printfont=currier:8 \n\
+		:set printoptions=number:y,header:0 \n\
+		:colorscheme default \n\
+		:hardcopy > %s \n\
+		:q\n" $(<:.c=.ps) |\
+		vim $<
+	printf "file-open:%s;\
 		export-area-drawing;\
-		export-filename:$@;\
-		export-do"\
+		export-filename:%s;\
+		export-do" $(<:.c=.ps) $@ \
 		| inkscape --shell
 	rm $(<:.cpp=.ps)
 
