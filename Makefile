@@ -13,7 +13,7 @@ ANIMATION_DONE:=$(ANIMATION:.svg=.done)
 CODIGO_PDF=$(CODIGO:.c=.pdf)
 PDF=$(FIGURAS_PDF) $(CODIGO_PDF) $(LOGOS_PDF)
 NPDF=$(FIGURAS_NPDF)
-GARBAGE=*.aux *.bbl *.blg *.log *.toc *.lof *.nav *.out *.snm
+GARBAGE=*.aux *.bbl *.blg *.log *.toc *.lof *.nav *.out *.snm *.vrb
 
 all: $(TEX_PDF)
 
