@@ -14,13 +14,13 @@ programas:
 -   `inkscape`
 -   `vim`
 -   `pdflatex`
--   `imagemagick`.
+-   `imagemagick`
 
 ## Uso
 
 -   `make` o `make all`: Crea todos los archivos.
 -   `make pdf-only`: Crea los archivos, y luego remueve los temporales.
--   `make resize`: Redimenciona las imágenes de tipo rasterizadas (formatos
+-   `make resize`: Redimensiona las imágenes de tipo rasterizadas (formatos
     `jpg` y `png`) a un tamaño máximo de **1080x1080px**. Esto se hace con el
     fin de reducir el espació ocupado por estas, manteniendo una buena
     calidad ¡Se debe ejecutar antes de hacer el `git add`!
@@ -29,14 +29,14 @@ programas:
 
 ## Consideraciones
 
--   Todas las imágenes (que no sean parte de una animación) deben estar dentor
+-   Todas las imágenes (que no sean parte de una animación) deben estar dentro
     de la carpeta `img` o `logos`.
 -   Las imágenes almacenadas deben se de tipo `svg`, `png` o `jpg`. Si se
     almacena una imagen en formato `pdf`, sera removida por `make clean`.
 -   El `Makefile` tiene una función para crear `pdf`s a partir de código _C_,
     sin embargo se debe crear una carpeta acorde para almacenarlo, y
     configurar la variable `CODIGO` del `Makefile`.
--   **¡¡REDIMENCIONAR LAS IMÁGENES!!** Ejecutar `make resize` antes de `git
+-   **¡¡REDIMENSIONAR LAS IMÁGENES!!** Ejecutar `make resize` antes de `git
     add`.
 -   Se provee una herramienta para generar animaciones burdas, cada
     _"fotograma"_ se almacena en la carpeta `ani`. Su funcionamiento se
