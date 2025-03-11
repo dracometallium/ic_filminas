@@ -139,13 +139,10 @@
 \frametitle{Sistemas no posicionales}
 
 \begin{itemize}
-    \item Un conjunto de símbolos, cada uno indicando una cantidad. La suma de
-        elementos multiplicados por su peso nos indican el número
-        representado.
+    \item Un conjunto de símbolos, cada uno con su peso propio.
 \end{itemize}
 
 \begin{minipage}{0.45\textwidth}
-\pause
 \begin{figure}
     \centering
     \includegraphics[width=1.0\textwidth]{img/ishango.jpg}
@@ -156,15 +153,24 @@
 \end{minipage}
 ~
 \begin{minipage}{0.45\textwidth}
-\pause
 \begin{figure}
     \centering
-    \egyptify{0}{0}{0}{0}{0}{4}{2}
+    %\egyptify{0}{0}{0}{0}{0}{4}{2}
+    \egone{2}\egten{4}
     \captionsetup{textfont=tiny,labelformat=empty,justification=centering}
     \caption{El número $42$ representado utilizando el sistema de numeración
-    egipcio.}
+    egipcio. Donde
+    \includegraphics[scale=.05]{styles/egyptian/egypt_heel.pdf}
+    equivale a 10 unidades,
+    \includegraphics[scale=.05]{styles/egyptian/egypt_stroke.pdf}
+    a una unidad.}
 \end{figure}
 \end{minipage}
+
+\begin{itemize}
+    \item[] La suma de elementos multiplicados por su peso nos indican el número
+        representado.
+\end{itemize}
 
 \end{frame}
 
