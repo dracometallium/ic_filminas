@@ -11,13 +11,13 @@ LOGOS_PDF=$(LOGOS:.svg=.pdf)
 FIGURAS_PDF=$(FIGURAS:.svg=.pdf)
 ANIMATION_DONE:=$(ANIMATION:.svg=.done)
 CODIGO_PDF=$(CODIGO:.c=.pdf)
-PDF=$(FIGURAS_PDF) $(CODIGO_PDF) $(LOGOS_PDF)
+PDF=$(FIGURAS_PDF) $(CODIGO_PDF) $(LOGOS_PDF) $(ANIMATION_DONE)
 NPDF=$(FIGURAS_NPDF)
 GARBAGE=*.aux *.bbl *.blg *.log *.toc *.lof *.nav *.out *.snm *.vrb
 
 all: $(TEX_PDF)
 
-$(TEX_PDF): %.pdf : %.tex $(PDF) $(NPDF) $(BIB) $(ANIMATION_DONE)
+$(TEX_PDF): %.pdf : %.tex $(PDF) $(NPDF) $(BIB)
 	rm -f $(<:.tex=.lof)
 	pdflatex -interaction=nonstopmode -halt-on-error $<
 	bibtex $(<:.tex=.aux) || true
@@ -84,3 +84,5 @@ help:
 
 resize:
 	./misc/resize.sh $(NPDF)
+
+.NOTPARALLEL: $(PDF)
