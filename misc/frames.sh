@@ -1,4 +1,5 @@
 #!/bin/sh
+export SELF_CALL=NO
 
 commands(){
     dirName=$(dirname "$1")
@@ -31,6 +32,8 @@ frames(){
 }
 
 while [ "0" != "$#" ]; do
-    frames "$1"
+    frames "$1" &
     shift
 done
+
+wait
