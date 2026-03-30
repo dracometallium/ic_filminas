@@ -2,8 +2,8 @@
 
 Normalmente unas filminas hechas en _LaTex_ no requieren mucha introducción,
 pero este repo es más que eso. Ademas de los `.tex`, este repositorio contiene
-un conjunto de _scripts_ y un `Makefile` que ayudan a generar, administrar y
-transformar distintos recursos.
+un conjunto de _scripts_ y un `Makefile` que ayudan a generar, administrar, y
+transformar los distintos recursos.
 
 ## Requerimientos
 
@@ -47,7 +47,7 @@ programas:
 Se incluye una herramienta para generar animaciones muy burdas, donde en cada
 paso se agrega contenido sobre el fotograma anterior. Ver el ejemplo **Sistema
 posicional ¿Cómo entendemos un numeral?** de la filmina
-`02-sitemasNumeracion.pdf`.
+`02-sistemasNumeracion.pdf`.
 
 El método de uso es sencillo. Se debe crear un `svg`, con capas llamadas
 _L00_, _L01_, _L02_, ... _LNN_. Por cada capa _LXX_ se genera un archivo
