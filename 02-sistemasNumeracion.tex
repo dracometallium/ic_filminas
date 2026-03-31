@@ -314,8 +314,8 @@
     N_{(b)} = \displaystyle\sum_{i=0}^{k} X_{i}{\times}b^{i}
     \pause
     =
-    X_{k}{\times}b^{k}+X_{k-1}{\times}b^{k-1}...
-        X_{1}{\times}b^{1}+X_{0}{\times}b^{0}
+    X_{0}{\times}b^{0}+X_{1}{\times}b^{1}...
+    X_{k-1}{\times}b^{k-1}+X_{k}{\times}b^{k}
     \pause
     = Q_{(10)}
 \end{equation*}
@@ -326,13 +326,13 @@ Ejemplos:
 \begin{itemize}
     \item
         $60_{(7)} = \pause
-        6{\times}7^1+0{\times}7^0 = \pause
+        0{\times}7^0+6{\times}7^1 = \pause
         42_{(10)}$\pause
-    \item $2A_{(16)} = \pause
-        2{\times}(16)^1+(10){\times}(16)^0 = \pause
+    \item $\mathrm{2A}_{(16)} = \pause
+        (10){\times}(16)^0+2{\times}(16)^1 = \pause
         42_{(10)}$\pause
     \item $1120_{(3)} = \pause
-        1{\times}3^3+1{\times}3^2+2{\times}3^1+0{\times}3^0 = \pause
+        +0{\times}3^0+2{\times}3^1+1{\times}3^2+1{\times}3^3 = \pause
         42_{(10)}$
 \end{itemize}
 
@@ -350,18 +350,19 @@ Ejemplos:
 \frametitle{Sistema posicional}
 \framesubtitle{Conversión de decimal a otras bases}
 
-    Para convertir $Q_{(10)}$ a su representación $N_{b}$ expresado en base
-    $b$.
+    Para convertir $Q_{(10)}$ a su representación $N_{(b)}$ (expresado en base
+    $b$).
     \begin{enumerate}
-        \item Dividir el número original por la base destino, anotando
-            cociente y resto
+    \item Realizar la división \textbf{entera} del número origina por la base
+        destino, anotando cociente y resto.
     \item Mientras el cociente sea mayor a cero:
         \begin{itemize}
             \item Volver al paso \textbf{1} reemplazando el número original
                 por el nuevo cociente.
         \end{itemize}
-    \item Finalmente escribimos los dígitos de nuestro número convertido
-        usando \textbf{todos los restos en orden inverso a como aparecieron}.
+    \item Finalmente escribimos \textbf{todos los restos en orden inverso a
+        como aparecieron}. El numeral resultante es $Q_{(10)}$ representado en
+        base $b$.
     \end{enumerate}
 
 \end{frame}
@@ -375,6 +376,8 @@ Ejemplos:
     Ejemplo:
     \pause
 
+    \huge
+    \centering
     \begin{tabular}[t]{ l r l}
 
         & C & R\\
@@ -389,7 +392,7 @@ Ejemplos:
 
 \pause
 Entonces:
-    $1961_{(10)} = 7A9_{(16)}$
+    $1961_{(10)} = \mathrm{7A9}_{(16)}$
 
 \end{frame}
 
