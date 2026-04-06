@@ -3,15 +3,17 @@ TEX_PDF=$(TEX:.tex=.pdf)
 AUX=$(TEX:.tex=.aux)
 LOGOS:=$(wildcard logos/*.svg)
 FIGURAS:=$(wildcard img/*.svg)
+IMGPPM:=$(wildcard img/*.ppm)
 FIGURAS_NPDF:=$(wildcard img/*.png img/*.jpg)
 ANIMATION:=$(wildcard ani/*.svg)
 CODIGO=
 BIB=refimg.bib
 LOGOS_PDF=$(LOGOS:.svg=.pdf)
 FIGURAS_PDF=$(FIGURAS:.svg=.pdf)
+IMGPPM_PDF=$(IMGPPM:.ppm=.pdf)
 ANIMATION_DONE:=$(ANIMATION:.svg=.done)
 CODIGO_PDF=$(CODIGO:.c=.pdf)
-PDF=$(FIGURAS_PDF) $(CODIGO_PDF) $(LOGOS_PDF) $(ANIMATION_DONE)
+PDF=$(FIGURAS_PDF) $(CODIGO_PDF) $(LOGOS_PDF) $(ANIMATION_DONE) $(IMGPPM_PDF)
 NPDF=$(FIGURAS_NPDF)
 GARBAGE=*.aux *.bbl *.blg *.log *.toc *.lof *.nav *.out *.snm *.vrb
 
@@ -35,6 +37,13 @@ $(FIGURAS_PDF): %.pdf : %.svg
 $(LOGOS_PDF): %.pdf : %.svg
 	printf "file-open:%s;\
 		export-area-drawing;\
+		export-filename:%s;\
+		export-overwrite;\
+		export-do;" $^ $@\
+		| SELF_CALL=NO inkscape --shell
+
+$(IMGPPM_PDF): %.pdf : %.ppm
+	printf "file-open:%s;\
 		export-filename:%s;\
 		export-overwrite;\
 		export-do;" $^ $@\
