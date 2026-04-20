@@ -16,6 +16,8 @@
 
 \usepackage{url}
 
+\usepackage{amsfonts} % Para `\mathbb`, así tengo ℤ
+
 \usepackage{babelbib}
 
 \usepackage{textcomp}
@@ -89,40 +91,84 @@ Representación de enteros}
     \item Enteros:
     \begin{itemize}
         \item Sin signo \emph{(SS)}.
-        \item Signo Magnitud \emph{(SM)}.
-        \item Complemento a 2 \emph{(C2)}.
-        \item Exceso.
+        \item Enteros con signo:
+        \begin{itemize}
+            \item Exceso.
+            \item Complemento a 2 \emph{(C2)}.
+        \end{itemize}
     \end{itemize}
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Representación de enteros}
     \framesubtitle{Sistemas de representación}
+
     \begin{itemize}
-        \item Es la forma en la que interpretamos un conjunto de \emph{bits}.
-        \item Solamente se puede operar entre datos representados con el mismo
-            sistema de representación.
+        \item Es la forma en la que interpretamos un conjunto de
+            \textbf{bits}.
+        \item Solamente se puede operar entre datos representados en el mismo
+            sistema de representación, y misma cantidad de \textbf{bits}.
         \item El resultado de toda operación vuelve a estar representado en el
             mismo sistema.
     \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Representación de enteros}
+    \framesubtitle{Rango de representación \emph{(RR)}}
+
+    Dado un conjunto de \textbf{bits} y un \emph{sistema de representación}
+    determinado, se podrá representar una cantidad finita y especifica de
+    todos los números posibles.
+
+    Llamamos \emph{Rango de representación} al intervalo que indica este
+    subconjunto. Se denota \textbf{[a, b]}, donde \textbf{a} indica el límite
+    inferior, y \textbf{b} el límite superior.
+
+\end{frame}
+
+\begin{frame}{Representación de enteros}
+    \framesubtitle{Rango de representación \emph{(RR)}}
+
+    Si al operar dos números (ya sea sumarlos, restarlos, multiplicarlos) el
+    resultado queda fuera del rango, no se podrá representar al resultado en
+    el sistema. A esto se lo llama \emph{overflow} o desbordamiento.
+
+    \pause
+
+    Por ejemplo, sea un sistema \emph{X} con \emph{rango de representación}
+    \textbf{[0, 30]}:
+
+    \begin{itemize}
+        \item 27 y 7 están dentro del \emph{RR}.\pause
+        \item \(27 - 7\) es igual a 20, que también esta dentro del \emph{RR},
+            por lo tanto puede ser representado en el sistema \emph{X}.\pause
+        \item \(27 + 7\) es igual a 34, que no esta dentro del \emph{RR} y por
+            lo tanto por lo tanto \textbf{NO} puede ser representado en el
+            sistema \emph{X}.\pause
+    \end{itemize}
+
+    Es importante detectar el \emph{overflow} ya que la operación no podrá
+    producir un resultado valido.
+
 \end{frame}
 
 \begin{frame}{Representación de enteros}
 
     \framesubtitle{Representación de enteros sin signo \emph{(SS)}}
 
-    Representación de números enteros positivos y el cero.
+    Representación de números enteros positivos y el cero (\(mathbb{N}_{0}\)).
 
     \begin{itemize}
         \item Para representar cada número usamos su representación binaria,
             completando con ceros a la izquierda para utilizar todos los
-            \emph{bits}.
-        \item Con $k$\bit{} podemos representar $2^{k}$ números distintos.
+            \textbf{bits}.
+        \item Con \(k\)\bit{} podemos representar \(2^{k}\) números distintos.
         \item Como queremos incluir el cero (y queremos representar todos los
-            enteros en el rango) el último número no puede ser $2^{k}$, sino
-            $(2^{k})-1$.
+            enteros en el rango) el último número no puede ser \(2^{k}\), sino
+            \(2^{k})-1\).
         \item Por lo tanto el \emph{Rango de Representación (RR)} de los
-            enteros sin signo con $k$\bit{} es $[0,(2^{k})-1]$.
+            enteros sin signo con \(k\)\bit{} es \(0,(2^{k})-1]\).
     \end{itemize}
 \end{frame}
 
@@ -131,237 +177,317 @@ Representación de enteros}
     \framesubtitle{Suma de enteros sin signo \emph{(SS)}}
 
     La suma de enteros sin signo en binario es muy similar a la suma en
-    decimal. Solo hay que recordar las siguientes reglas:
+    decimal. Se suma por columna, cada una tiene un bit por operando, y un bit
+    por el acarreo.
+
+    Solo hay que recordar las siguientes reglas:
     \pause
     \begin{itemize}
         \item Si no tenemos acarreo o el acarreo es cero:
             \begin{itemize}
-                \item $0 + 0 = 0$, y no generamos acarreo.
-                \item $1 + 0 = 1$, y no generamos acarreo.
-                \item $1 + 1 = 0$, y generamos 1 de acarreo.
+                \item \(0 + 0 = 0\), y no generamos acarreo.
+                \item \(1 + 0 = 1\), y no generamos acarreo.
+                \item \(1 + 1 = 0\), y generamos 1 de acarreo.
             \end{itemize}
         \pause
         \item Si tenemos 1 de acarreo:
             \begin{itemize}
-                \item $(1) + 0 + 0 = 1$, y no generamos acarreo.
-                \item $(1) + 1 + 0 = 0$, y generamos 1 de acarreo.
-                \item $(1) + 1 + 1 = 1$, y generamos 1 de acarreo.
+                \item \(1) + 0 + 0 = 1\), y no generamos acarreo.
+                \item \(1) + 1 + 0 = 0\), y generamos 1 de acarreo.
+                \item \(1) + 1 + 1 = 1\), y generamos 1 de acarreo.
             \end{itemize}
+        \pause
+        \item Si el último acarreo es 1, se produjo \emph{overflow}.
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Representación de enteros}
-    \framesubtitle{Sistema de Signo-magnitud \emph{(SM)}}
 
-    \begin{itemize}
-        \item El \emph{bit} más significativo (el que esta más a la izquierda)
-            representa el signo.
-            \begin{itemize}
-                \item \textbf{0 → Positivo}
-                \item \textbf{1 → Negativo}
-            \end{itemize}
-        \item Los \emph{bits} restantes, el valor absoluto o magnitud.
-        \item Si tenemos \emph{k}\bit, el \emph{RR} es:
-            $[-(2^{k-1}-1),(2^{k-1})-1]$
-    \end{itemize}\pause
-    \emph{Ejemplo (con 8\bit{}):}
-        \begin{itemize}
-            \item $34_{10} = 0\, 0100010$
-            \item $-34_{10} = 1\, 0100010$
-        \end{itemize}
+    \framesubtitle{Suma de enteros sin signo \emph{(SS)}}
+
+    $<$Insertar ejemplo aquí$>$
+
 \end{frame}
 
 \begin{frame}{Representación de enteros}
-    \framesubtitle{\emph{(SM)}: Limitaciones}
-    \begin{itemize}
-        \item Doble representación del cero.
-        \item No utiliza eficientemente los \emph{k}\bit{}.
-        \item No es conveniente para la aritmética (poco práctico).
-\end{itemize}
-\end{frame}
+    \framesubtitle{Notación en exceso}
 
-\begin{frame}{Operación de Complemento a 2}
-\begin{itemize}
-    \item La operación de complementar a 2 consiste en obtener el opuesto de
-        un número aritméticamente (el que tiene el mismo valor absoluto pero
-        signo opuesto).
-    \item $ C2(a) + a = 0 $
-\end{itemize} \pause
-
-    Para obtener el complemento a 2 de un número:
-    
-    \begin{itemize}
-    \item Se invierte cada uno de los bits (reemplazando 0 por 1 y viceversa)
-    \item Al resultado se le suma 1.
-    \end{itemize}
-    Ejemplo: $C2(1010) = 01011$
-\end{frame}
-
-\begin{frame}{Representación de enteros}
-    \framesubtitle{Representación en Complemento a 2 \emph{(C2)}}
-
-    Para representar un número \textit{a} en complemento a 2 con \emph{k}
-    \textbf{bits}, comenzamos por considerar su signo:
-    \begin{itemize}
-    \pause
-    \item Si \textit{a} es positivo o cero, lo representamos como en
-        \emph{SS(k)}, es decir, lo escribimos en base 2 con \emph{k}\bit{}.
-    \item Si \textit{a} es negativo, tomamos su valor absoluto, lo
-        representamos como en \emph{SS(k)}, y le aplicamos la
-            \textbf{operación} complemento a 2. 
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Representación de enteros}
-    \framesubtitle{Representación en Complemento a 2 \emph{(C2)}}
-    Ejemplo, representar 17 en \emph{C2} con \emph{k} = 8\bit{}:
-    \pause
-    \begin{itemize}
-        \item $17_{10} = 0001\,0001_{2}$ con \textit{k} = 8 bits.
-    \end{itemize}
-    \pause
-    Ejemplo, representar -17 en \emph{C2} con \emph{k} = 8\bit{}:
-    \pause
-    \begin{itemize}
-        \item Buscamos la representación de $|-17|$:\\
-        $17 = 0001\,0001_{2}$ con \textit{k} = 8 bits.
-    \pause
-        \item Aplicamos la operación de \emph{C2} a la representación de
-            $|-17|$:\\
-            $C2(0001\,0001) = 1110\,1111 = -17_{10}$
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Representación de enteros}
-    \framesubtitle{\emph{C2}: Rango de representación}
-    El \emph{RR} del sistema de representación complemento a dos, con
-    \emph{k}\bit{}, es:  $[-2^{k-1},(2^{k-1})-1]$ 
-\end{frame}
-
-
-\begin{frame}{Representación de enteros}
-    \framesubtitle{Ventajas del sistema de representación \emph{C2} sobre
-    \emph{SM}}
-
-    \begin{itemize}
-        \item El cero tiene una única representación, lo que facilita las
-            comparaciones.
-        \item No requiere comprobaciones de signo antes de operar. Se opera
-            directamente.
-        \item El mecanismo de cálculo es eficiente y fácil de implementar en
-            hardware.
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Error MUY frecuente}
-    Para representar cualquier número en \emph{C2}... lo tengo que
-    complementar a 2....  \textbf{NO!}
-    \pause
-    Al \textit{representar} en \emph{C2}, la \textit{operación} de
-    complementar a 2 únicamente se aplica cuando queremos \textbf{obtener el
-    opuesto de un número}.
-\end{frame}
-
-\begin{frame}{Representación de enteros}
-    \framesubtitle{Aritmética en \emph{C2}}
-
-    Una gran ventaja que aporta el sistema \emph{C2} es que no es
-            necesario implementar algoritmos de resta: Cuando se necesita
-            efectuar una resta, se complementa el sustraendo y luego se lo
-            suma al minuendo.
-
-    Las computadoras no restan: siempre suman.
-\end{frame}
-
-\begin{frame}{Desbordamiento (overflow)}
-\begin{itemize}
-    \item Cuando el resultado de una operación aritmética excede la cantidad de dígitos del sistema, el resultado es inválido.
-    \item Es importante que la computadora lo detecte, para informar al proceso, y que pueda descartar el resultado.
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{Desbordamiento en C2}
-    \begin{itemize}
-    \item Puede ocurrir tanto al sumar dos números positivos como dos negativos.
-    \item Es fácil detectarlo en este sistema, observando los dos últimos bits de acarreo (carry).
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Detectar desbordamiento en C2}
-Se observan los dos últimos bits de acarreo (carry).
-    \begin{itemize}
-    \item Son diferentes? Hay overflow.
-    \item Son iguales? No hay overflow.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Detectar desbordamiento en C2}
-    Ejemplo: 23 - 9 (extender el signo para llegar a los \textit{k} bits)
-    \begin{itemize}
-        \item 00010111 +
-        \item 11110111
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Detectar desbordamiento en C2}
+    Dado un intervalo \textbf{[a,b]}, representamos a \(N \in \mathbf{[a,b]}\)
+    como el desplazamiento positivo desde \textbf{a} (usando representación
+    entera sin signo).
     \begin{figure}
     \centering
-    \includegraphics[height=0.75\textheight]{img/sumaSO.pdf}
-    \captionsetup{labelformat=empty}
-    \caption{}
-    \end{figure}
-\end{frame}
-
-\begin{frame}{Detectar desbordamiento en C2}
-    Ejemplo: 123 + 9
-    \begin{itemize}
-        \item 01111011 +
-        \item 00001001
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Detectar desbordamiento en C2}
-    \begin{figure}
-        \centering
-        \includegraphics[height=0.75\textheight]{img/sumaCO.pdf}
-        \captionsetup{labelformat=empty}
-        \caption{}
-    \end{figure}
-\end{frame}
-
-\begin{frame}{Notación en exceso}
-
-    \begin{itemize}
-    \item Se determina el intervalo de enteros a representar.
-    \item Se determina la cantidad de bits necesarios para representar todos los enteros del intervalo.
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Notación en exceso}
-    \begin{itemize}
-        \item Un intervalo de $[a,b]$ enteros, comprende \textit{n} valores, donde $n = b - a + 1$
-        \item ¿Cuántos bits necesitamos para representar \textit{n} valores?
-        \item Por ejemplo, para un intervalo $[150,157]$.
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Notación en exceso}
-    \begin{block}{Representar un intervalo de enteros}
-    Notemos que tanto \textit{a} como \textit{b} pueden ser negativos. Así podemos representar intervalos arbitrarios de enteros, lo que nos vuelve a dar un sistema de representación con signo.
-    \end{block}
-\end{frame}
-
-\begin{frame}{Notación en exceso}
-\small Para saber qué número le corresponde a cada entero: $valor\_decimal - a$ 
-    \begin{figure}
-    \centering
-    \includegraphics[width=0.75\textwidth]{img/exceso.pdf}
+        \includegraphics[height=0.75\textheight]{img/exceso.pdf}
     \captionsetup{labelformat=empty}
     \caption{}
 \end{figure}
 
 \end{frame}
+
+\begin{frame}{Representación de enteros}
+    \framesubtitle{Notación en exceso}
+
+    Para esto se debe:
+
+    \begin{itemize}
+        \item Determina el intervalo de enteros a representar \textbf{[a, b]}.
+        \item Determina la cantidad de \(k\)\bit{} necesarios para representar
+            todos los enteros del intervalo.
+        \item Para representar \(N \in [a,b]\), calcular \(Q=N-a\), y
+            almacenar \(Q\) como un entero sin signo.
+    \end{itemize}
+
+    Recordar que tanto \textbf{a} como \textbf{b} pueden ser positivos o
+    negativos (siempre que \(mathbf{a}<\mathbf{b}\)).
+
+\end{frame}
+
+\begin{frame}{Representación de enteros}
+    \framesubtitle{Notación en exceso}
+
+    Ejemplo:
+
+    Si queremos representar \(N\) dentro del rango \textbf{[-5, 20]}:
+
+    \pause
+
+    \begin{itemize}
+        \item Tenemos \(20-(-5)+1=26\) números dentro del rango, por lo que
+            necesitamos por lo menos 5\bit{}.\pause
+        \item Si \(N=-5 \implies Q = a-(N) = -5-(-5) = 0\).\pause{} Entonces
+            \(5\) sera representado como \(00000\).\pause
+        \item Si \(N=-1 \implies Q = a-(N) = -1-(-5) = 4\).\pause{} Entonces
+            \(1\) sera representado como \(00100\).\pause
+        \item Si \(N=15 \implies Q = a-(N) = 15-(-5) = 20\).\pause{} Entonces
+            \(20\) sera representado como \(10100\).
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Representación de enteros}
+    \framesubtitle{Representación en Complemento a 2 \emph{(C2)}}
+
+    Para representar a \(N\) en \emph{C2} y \emph{k}\bit{} usamos la
+    representación \emph{SS} de \(Q=(2^{k}+N)(\text{mod}~2^{k})\). Como solo
+    tenemos \emph{k}\bit{}, si \(Q>2^{k}-1\) el \textbf{bit} sobrante se
+    descarta.
+
+    \pause
+    Ejemplo, utilizando 4\bit{}:
+    \pause
+    \[
+        \begin{split}
+            \text{Si}~ N=2
+            &\implies Q = 2^{k}+N = 16 + 2 = 18 = 1\,0010_{2} \\
+            &\implies Q(\text{mod}~2^{k}) = 1\,0010_{2}(\text{mod}~2^{4}) =
+            0010_{2}\\
+            &\implies \text{C2}(2,4) = 0010
+        \end{split}
+    \]
+    \pause
+    \[
+        \begin{split}
+            \text{Si}~ N=-2
+            &\implies Q = 2^{k}+N = 16-2 = 14 = 0\,1110_{2}\\
+            &\implies Q(\text{mod}~2^{k}) = 1\,1110_{2}(\text{mod}~2^{4}) =
+            1110_{2}\\
+            &\implies \text{C2}(-2,4) = 1110
+        \end{split}
+    \]
+
+\end{frame}
+
+\begin{frame}{Representación de enteros}
+    \framesubtitle{Representación en Complemento a 2 \emph{(C2)}}
+
+    \begin{itemize}
+        \item El \textbf{bit} más significativo nos indicara el signo del
+            número, \textbf{0} para los positivos, \textbf{1} para los
+            negativos.
+        \item El mayor valor representable sera aquel tenga todos sus
+            \textbf{bits} en \textbf{1}, menos el más significativo.
+        \item El menor valor representable sera aquel que tenga el
+            \textbf{bit} más significativo en \textbf{1} y el resto en
+            \textbf{0}.
+        \item Por lo tanto, el \emph{RR} de \emph{C2} con \emph{k}\bit{} sera:
+            \([-2^{k-1}, 2^{k-1}-1]\).
+    \end{itemize}
+
+    Para 4\bit{}, la recta numérica es:
+\begin{figure}
+    \centering
+    \includegraphics[height=0.33\textheight]{img/rectaC2.pdf}
+    \captionsetup{labelformat=empty}
+    \caption{}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Representación de enteros}
+    \framesubtitle{Operación de Complemento a 2 \(C2(X)\)}
+
+    La operación de complementar a 2 consiste en obtener el opuesto de un
+    número aritméticamente (el que tiene el mismo valor absoluto pero signo
+    opuesto). Es decir, \(C2(X)+X=0\).
+    \pause
+
+    Antes de calcularlo veamos que:
+    \pause
+
+    \begin{enumerate}
+        \item Si \(Q=2^{k}+N \implies Q=(2^{k}-1)+N+1\). Esto es útil por que
+            en base 2, \(2^{k}-1\) es igual a \(111\ldots{}111\) (con \emph{k}
+            unos). \pause
+        \item Si queremos representar el opuesto de \(N\) (es decir \(-N\)),
+            entonces por definición debemos encontrar
+            \(Q=2^{k}-N=_{\text{por(1)}}(2^{k}-1)-N+1\).\pause
+        \item En binario la operación \(111\ldots{}111_{2} - X\) es
+            equivalente a invertir los \textbf{bits} de \(X\) (cambiar los
+            \textbf{0} por \textbf{1} y viceversa).
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Representación de enteros}
+    \framesubtitle{Operación de Complemento a 2 \(C2(X)\)}
+
+    \begin{enumerate}
+        \setcounter{enumi}{3}
+        \item Entonces, por \emph{(2)} y \emph{(3)}:\pause{} para obtener el
+            \textbf{Complemento a dos de N} (\(C2(N)\)) es suficiente con
+            invertir los \textbf{bits} de la representación en \emph{C2}, y
+            sumarle 1 al resultado.
+    \end{enumerate}
+    \pause
+
+    Ejemplo:
+
+    \begin{itemize}
+        \item \(C2(1010\,1001) =\pause{} \neg{}(1010\,1001)+1 =\pause{}
+            0101\,0110+1 =\pause{} 0101\,0111\)\pause
+        \item \(C2(0101\,0111) =\pause{} \neg{}(0101\,0111)+1 =\pause{}
+            1010\,1000+1 =\pause{} 1010\,1001\)\pause
+        \item \(C2(0000\,0000) =\pause{} \neg{}(0000\,0000)+1 =\pause{}
+            1111\,1111+1 =\pause{} 0000\,0000\)
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Representación de enteros}
+    \framesubtitle{Representación en Complemento a 2 \emph{(C2)}}
+
+    Utilizando la \emph{\textbf{operación} de complemento a 2} podemos
+    representar más fácilmente los números en el \emph{\textbf{sistema de
+    representación} de complemento a 2} que utilizando la definición que vimos
+    al inicio.
+
+    Para representar un número \(N\) en \emph{C2} con \emph{k}\bit{},\pause{}
+    comenzamos por considerar su signo:
+
+    \begin{itemize}
+    \pause
+    \item Si \(N\) es positivo o cero, lo representamos como en \emph{SS(k)},
+        es decir, lo escribimos en base 2 con \emph{k}\bit{}.
+    \item Si \(N\) es negativo, tomamos su valor absoluto, lo representamos
+        como en \emph{SS(k)}, y le aplicamos la \textbf{operación} complemento
+            a 2.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Representación de enteros}
+    \framesubtitle{Representación en Complemento a 2 \emph{(C2)}}
+
+    Ejemplo, representar 17 en \emph{C2} con \emph{k} = 8\bit{}:
+    \pause
+    \begin{itemize}
+        \item \(17_{10} = 0001\,0001_{2}\) con \emph{k} = 8 bits.
+    \end{itemize}
+    \pause
+
+    Ejemplo, representar -17 en \emph{C2} con \emph{k} = 8\bit{}:
+    \pause
+
+    \begin{itemize}
+        \item Buscamos la representación de \(17\): \(17 = 0001\,0001_{2}\)
+            con \(k=8\) \textbf{bits}.\pause
+        \item Aplicamos la operación de \(C2(X)\) a la representación de
+            \(17\): \(C2(0001\,0001) = 1110\,1111 = -17_{10}\)
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Error MUY frecuente}
+
+    \texttt{Para representar cualquier número en \emph{C2}\ldots lo tengo que
+    complementar a 2\ldots} \textbf{NO!}
+    \pause
+
+    Al \textbf{representar} en \emph{C2}, solamente aplicamos \textbf{operación} de
+    \emph{complemento a 2} cuando queremos \textbf{obtener el opuesto de un
+    número}.
+
+\end{frame}
+
+\begin{frame}{Representación de enteros}
+    \framesubtitle{Suma en \emph{C2}}
+
+    Para sumar en \emph{C2}, se realiza la operación de suma tal como si fuera
+    suma sin signo. Solamente cambia la manera en la que se detecta el
+    \emph{overflow}: si los dos últimos acarreos son distintos, entonces se
+    produjo \emph{overflow}.\pause
+
+\begin{minipage}{0.45\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\textwidth]{img/sumaSO.pdf}
+        \captionsetup{labelformat=empty}
+        \caption{Acarreos iguales,\\
+        sin \emph{overflow}}
+    \end{figure}
+\end{minipage}
+~
+\begin{minipage}{0.45\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\textwidth]{img/sumaCO.pdf}
+        \captionsetup{labelformat=empty}
+        \caption{Acarreos distintos,\\
+        hay \emph{overflow}}
+    \end{figure}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}{Representación de enteros}
+    \framesubtitle{\emph{Type casting} y extensión de signo}
+
+    ¿Qué pasa cuando necesitamos obtener el resultado de la suma de dos
+    operandos, pero sabemos que el resultado no esta dentro del \emph{RR} para
+    la cantidad de \textbf{bits} asignados? ¿Y si tenemos operandos
+    representados con distinta cantidad de \textbf{bits}?
+
+    Debemos convertir el tipo de dato, moldeándolo a una cantidad de
+    \textbf{bits} mayor (y aveces cambiando el sistema).\pause
+
+    \begin{itemize}
+        \item En caso de los números representados en \emph{SS} simplemente se
+            incrementa la cantidad de \textbf{bits}, y se rellena con
+            \textbf{0}s. \pause
+
+        \item En el caso de los enteros representados en \emph{C2}, se debe
+            tener más cuidado:\pause
+        \begin{itemize}
+            \item Si el número es positivo, simplemente se rellena con
+                \textbf{0}s.
+            \item Si el número es negativo, se debe rellenar con
+                \textbf{1}s. En caso contrario ¡Se cambiaría el signo!
+                \pause
+        \end{itemize}
+            A esto se lo llama \emph{extensión de signo}: simplemente se
+            rellena con el \textbf{bit} más significativo.
+    \end{itemize}
+
+\end{frame}
+
 
 \againframe{temario}
 

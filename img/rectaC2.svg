@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="154.50002mm"
+   height="57.017876mm"
+   viewBox="0 0 154.50002 57.017876"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="rectaC2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="1.4203956"
+     inkscape:cx="88.003651"
+     inkscape:cy="81.667388"
+     inkscape:window-width="1366"
+     inkscape:window-height="753"
+     inkscape:window-x="0"
+     inkscape:window-y="15"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="-24.300006"
+       originy="-30.34243"
+       spacingx="8.4666667"
+       spacingy="8.4666667"
+       empcolor="#3f3fff"
+       empopacity="0.25098039"
+       color="#3f3fff"
+       opacity="0.1254902"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <rect
+       x="64.000008"
+       y="64"
+       width="615.22858"
+       height="121.02064"
+       id="rect26" />
+    <marker
+       style="overflow:visible"
+       id="marker18"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide, heavy arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="m 1,0 -3,3 h -2 l 3,-3 -3,-3 h 2 z"
+         id="path18" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ArrowWideHeavy"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide, heavy arrow"
+       markerWidth="1.1"
+       markerHeight="1.1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="m 1,0 -3,3 h -2 l 3,-3 -3,-3 h 2 z"
+         id="path17" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-24.300002,-30.342429)">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text26"
+       style="font-size:39.9999px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect26)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;line-height:1.25;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+       x="162.19229"
+       y="2.6161222"
+       id="text41"><tspan
+         sodipodi:role="line"
+         id="tspan41"
+         x="162.19229"
+         y="2.6161222"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000" /></text>
+    <g
+       id="g55">
+      <path
+         style="display:inline;fill:#1a1a1a;stroke:#404080;stroke-width:2.11667;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ArrowWideHeavy)"
+         d="m 25.400002,59.266669 h 8.466667"
+         id="path26"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="display:inline;fill:#1a1a1a;stroke:#804040;stroke-width:2.11667;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker18)"
+         d="m 169.33335,59.266669 h 8.46666"
+         id="path42"
+         sodipodi:nodetypes="cc" />
+      <g
+         id="g54">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;line-height:1.25;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+           x="26.679131"
+           y="87.282791"
+           id="text36"><tspan
+             sodipodi:role="line"
+             id="tspan36"
+             x="26.679131"
+             y="87.282791"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">100</tspan></text>
+        <path
+           style="display:inline;fill:#1a1a1a;stroke:#804040;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="M 50.799999,67.733335 V 50.800002"
+           id="path32"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="display:inline;fill:#1a1a1a;stroke:#804040;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="M 33.866669,76.200003 V 42.333335"
+           id="path36"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="display:inline;fill:#1a1a1a;stroke:#804040;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="M 67.733339,67.733335 V 50.800002"
+           id="path37"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="display:inline;fill:#1a1a1a;stroke:#804040;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="M 84.666669,67.733335 V 50.800002"
+           id="path38"
+           sodipodi:nodetypes="cc" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;line-height:1.25;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+           x="43.61245"
+           y="78.816124"
+           id="text38"><tspan
+             sodipodi:role="line"
+             id="tspan38"
+             x="43.61245"
+             y="78.816124"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">101</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;line-height:1.25;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+           x="60.493462"
+           y="78.816124"
+           id="text39"><tspan
+             sodipodi:role="line"
+             id="tspan39"
+             x="60.493462"
+             y="78.816124"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">110</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;line-height:1.25;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+           x="77.426796"
+           y="78.816124"
+           id="text40"><tspan
+             sodipodi:role="line"
+             id="tspan40"
+             x="77.426796"
+             y="78.816124"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">111</tspan></text>
+        <path
+           style="display:inline;fill:#1a1a1a;stroke:#804040;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="M 33.866669,59.266669 H 101.60001"
+           id="path43"
+           sodipodi:nodetypes="cc" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+           x="29.553986"
+           y="37.337986"
+           id="text47"><tspan
+             sodipodi:role="line"
+             id="tspan47"
+             x="29.553986"
+             y="37.337986"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">-4</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+           x="46.561417"
+           y="45.741158"
+           id="text48"><tspan
+             sodipodi:role="line"
+             id="tspan48"
+             x="46.561417"
+             y="45.741158"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">-3</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+           x="61.869789"
+           y="45.799366"
+           id="text49"><tspan
+             sodipodi:role="line"
+             id="tspan49"
+             x="61.869789"
+             y="45.799366"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">-2</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+           x="80.57093"
+           y="45.799366"
+           id="text50"><tspan
+             sodipodi:role="line"
+             id="tspan50"
+             x="80.57093"
+             y="45.799366"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">-1</tspan></text>
+      </g>
+      <g
+         id="g53">
+        <path
+           style="display:inline;fill:#1a1a1a;stroke:#404080;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="m 101.60001,59.266669 h 67.73334"
+           id="path27"
+           sodipodi:nodetypes="cc" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;line-height:1.25;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+           x="94.458977"
+           y="87.282791"
+           id="text27"><tspan
+             sodipodi:role="line"
+             id="tspan27"
+             x="94.458977"
+             y="87.282791"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">000</tspan></text>
+        <path
+           style="display:inline;fill:#1a1a1a;stroke:#404080;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="M 118.53334,67.733335 V 50.800004"
+           id="path29"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="display:inline;fill:#1a1a1a;stroke:#404080;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="M 135.46668,67.733335 V 50.800004"
+           id="path30"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="display:inline;fill:#1a1a1a;stroke:#404080;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="M 152.40001,67.733335 V 50.800004"
+           id="path31"
+           sodipodi:nodetypes="cc" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+           x="98.95948"
+           y="37.27449"
+           id="text32"><tspan
+             sodipodi:role="line"
+             id="tspan32"
+             x="98.95948"
+             y="37.27449"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">0</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;line-height:1.25;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+           x="111.3923"
+           y="78.816124"
+           id="text33"><tspan
+             sodipodi:role="line"
+             id="tspan33"
+             x="111.3923"
+             y="78.816124"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">001</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;line-height:1.25;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+           x="128.32562"
+           y="78.816124"
+           id="text34"><tspan
+             sodipodi:role="line"
+             id="tspan34"
+             x="128.32562"
+             y="78.816124"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">010</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;line-height:1.25;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+           x="145.25896"
+           y="78.816124"
+           id="text35"><tspan
+             sodipodi:role="line"
+             id="tspan35"
+             x="145.25896"
+             y="78.816124"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">011</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+           x="115.89281"
+           y="45.79937"
+           id="text44"><tspan
+             sodipodi:role="line"
+             id="tspan44"
+             x="115.89281"
+             y="45.79937"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">1</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+           x="132.82614"
+           y="45.79937"
+           id="text45"><tspan
+             sodipodi:role="line"
+             id="tspan45"
+             x="132.82614"
+             y="45.79937"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">2</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+           x="149.75946"
+           y="45.741165"
+           id="text46"><tspan
+             sodipodi:role="line"
+             id="tspan46"
+             x="149.75946"
+             y="45.741165"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">3</tspan></text>
+        <path
+           style="display:inline;fill:#1a1a1a;stroke:#404080;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="M 101.60001,76.200002 V 42.333334"
+           id="path28"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;line-height:1.25;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+         x="162.14581"
+         y="87.282791"
+         id="text51"><tspan
+           sodipodi:role="line"
+           id="tspan51"
+           x="162.14581"
+           y="87.282791"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.9375px;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">100</tspan></text>
+      <path
+         style="display:inline;fill:#1a1a1a;stroke:#804040;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="M 169.33335,76.200003 V 42.333335"
+         id="path51"
+         sodipodi:nodetypes="cc" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;stroke-width:0.264583"
+         x="165.02068"
+         y="37.337986"
+         id="text52"><tspan
+           sodipodi:role="line"
+           id="tspan52"
+           x="165.02068"
+           y="37.337986"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;font-family:'Latin Modern Roman Demi';-inkscape-font-specification:'Latin Modern Roman Demi, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000">-4</tspan></text>
+    </g>
+  </g>
+</svg>
