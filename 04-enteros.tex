@@ -174,7 +174,7 @@ Representación de enteros}
             enteros en el rango) el último número no puede ser \(2^{k}\), sino
             \(2^{k})-1\). \pause
         \item Por lo tanto el \emph{Rango de Representación (RR)} de los
-            enteros sin signo con \(k\)\bit{} es \(0,(2^{k})-1]\).
+            enteros sin signo con \(k\)\bit{} es \([0,2^{k}-1]\).
     \end{itemize}
 \end{frame}
 
@@ -272,6 +272,25 @@ Representación de enteros}
 \end{frame}
 
 \begin{frame}{Representación de enteros}
+    \framesubtitle{Notación en exceso}
+
+    Ventajas y desventajas de la notación en exceso: \pause
+
+    \begin{itemize}
+        \item Permite especificar un \emph{RR} que se ajuste a nuestras
+            necesidades, incluso uno que solo contenga negativos o positivos.
+            \pause
+        \item Comparar entre dos enteros se puede realizar con el mismo
+            algoritmo que para enteros \emph{SS}. \pause
+        \item Incrementar o decrementar se realiza de la misma forma que con
+            los enteros \emph{SS}. \pause
+        \item ¿Cómo sumamos dos números representados en exceso? No es
+            trivial, normalmente se los transforma a otros formatos.
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Representación de enteros}
     \framesubtitle{Representación en Complemento a 2 \emph{(C2)}}
 
     Para representar a \(N\) en \emph{C2} y \emph{k}\bit{} usamos la
@@ -304,7 +323,6 @@ Representación de enteros}
     descarta.
 
     Otro ejemplo, utilizando 4\bit{}:
-
     \pause
     \[
         \begin{split}
