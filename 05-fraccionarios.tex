@@ -22,8 +22,6 @@
 
 \usepackage{amsmath} %Para `aligned` en las ecuaciones.
 
-\usepackage{styles/egyptian}
-
 \newcommand{\aprox}{\raisebox{0.5ex}{\texttildelow}}
 \newcommand{\bit}{\textbf{b}}
 \newcommand{\Byte}{\textbf{B}}
@@ -35,7 +33,6 @@
 \usetheme{Rochester}
 \usecolortheme{whale}
 
-%\usetheme{Warsaw}
 
 \beamertemplatenavigationsymbolsempty
 
@@ -63,7 +60,7 @@
 \setbeamertemplate{footline}[centered page number]
 
 \title{Representación de la información:\\
-Representación de números fraccionarios y reales}
+Representación de números racionales y reales}
 \author{}
 \date{}
 
@@ -82,58 +79,69 @@ Representación de números fraccionarios y reales}
 
 \begin{frame}[label=temario]{Representación de datos numéricos}
 \begin{itemize}
-\item Fraccionarios:
+\item Racionales:
     \begin{itemize}
-        \item Punto Fijo.
-        \item Punto Flotante.
+        \item Punto Fijo (\emph{PF}).
+        \item Punto Flotante (\emph{minifloat}).
     \end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Números fraccionarios}
+\begin{frame}{Números racionales y fraccionarios}
 \begin{itemize}
+    \item Los números racionales son todos aquellos números que pueden ser
+        representados por la fracción o razón, entre dos enteros.
     \item Los números fraccionarios son aquellos racionales que no son
-        enteros, y se escriben como una razón, fracción o cociente de dos
         enteros.
     \item Cuando se representan como decimales, la parte decimal puede ser
         finita o periódica (no finita, pero que se repite).\pause
-    \item Por ejemplo $0,75$ también puede escribirse como $\frac{3}{4}$.
-    \item Por ejemplo $0,\overline{3}$ también puede escribirse como
-        $\frac{1}{3}$.
+    \item Por ejemplo \(0,75\) también puede escribirse como \(\frac{3}{4}\).
+    \item Por ejemplo \(0,\overline{3}\) también puede escribirse como
+        \(\frac{1}{3}\).
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Números irracionales}
 \begin{itemize}
-    \item Por otro lado, existen números reales que no son racionales (no
-        existe una fracción entre enteros que los represente) pero tienen una
-        representación decimal con parte entera y una parte decimal no
-        periódica e infinita.\pause
-    \item Por ejemplo $\sqrt{2}$ no puede escribirse como una fracción de
+    \item Por otro lado, existen números dentro de la recta numérica real que
+        no son racionales (no existe una fracción entre enteros que los
+        represente) pero tienen una representación decimal con parte entera y
+        una parte decimal \textbf{infinita} y \textbf{no periódica}.\pause
+    \item Por ejemplo \(\sqrt{2}\) no puede escribirse como una fracción de
         enteros, pero si como\\ \pause
-        $1.414213562373095048801688724209698078569671875376$\\
-        $94807317667973799073247846210703885038753432764157$\\
-        $27350138462309122970249248360558507372126441214970$\\
-        $99935831413222665927505592755799950501152782060571$\\
-        $47010955997160597027453459686201472851741864088919$\\
-        $86095523292304843087143214508397626036279952514079$\\
-        $89687253396546331808829640620615258352395054745750$\\
-        $28775996172983557522033753185701135437460340849884$\\
-        $71603868999706990048150305440277903164542478230684$\\
-        $92936918621580578463111596668713013015618568987237$\\
-        $23528850926486124949771542183342042856860601468247$\\
-        $20771435854874155657069677653720226485447015858801$\\
-        $62075847492265722600208558446652145839889394437092$\\
+        \(1.414213562373095048801688724209698078569671875376\)\\
+        \(94807317667973799073247846210703885038753432764157\)\\
+        \(27350138462309122970249248360558507372126441214970\)\\
+        \(99935831413222665927505592755799950501152782060571\)\\
+        \(47010955997160597027453459686201472851741864088919\)\\
+        \(86095523292304843087143214508397626036279952514079\)\\
+        \(89687253396546331808829640620615258352395054745750\)\\
+        \(28775996172983557522033753185701135437460340849884\)\\
+        \(71603868999706990048150305440277903164542478230684\)\\
+        \(92936918621580578463111596668713013015618568987237\)\\
+        \(23528850926486124949771542183342042856860601468247\)\\
+        \(20771435854874155657069677653720226485447015858801\)\\
+        \(62075847492265722600208558446652145839889394437092\)\\
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Números reales}
+    \begin{figure}
+    \centering
+    \includegraphics[height=0.9\textheight]{img/reales.pdf}
+    \captionsetup{labelformat=empty}
+    \caption{}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{Expresión General Extendida}
 
-    La coma (o punto decimal) señala el lugar donde los exponentes de la base de la expresión general se
-    hacen negativos.
+    La coma (o punto decimal) señala el lugar donde los exponentes de la base
+    de la expresión general se hacen negativos.
 
-    Sea un número $N_{(b)} = X_{k}X_{k-1}...X_{1}X_{0},X_{-1}X_{-2}...X_{-q}$, donde cada $X_{i}$ son sus
-    dígitos en base $b$. Su representación en decimal $W_{(10)}$:
+    Sea un número \(N_{(b)} =
+    X_{k}X_{k-1}...X_{1}X_{0},X_{-1}X_{-2}...X_{-q}\), donde cada \(X_{i}\)
+    son sus dígitos en base \(b\). Su representación en decimal \(W_{(10)}\):
 
 \begin{equation*}
 \begin{aligned}
@@ -152,13 +160,13 @@ Ejemplos:
 
 \begin{itemize}
     \item
-        $3.14_{(10)} =
+        \(3.14_{(10)} =
         3{\times}10^0+1{\times}10^{-1}+4{\times}10^{-2} =
-        3.14_{(10)}$
+        3.14_{(10)}\)
     \item
-        $10.01_{(10)} =
+        \(10.01_{(2)} =
         1{\times}2^1+0{\times}2^0+0{\times}2^{-1}+1{\times}2^{-2} =
-        2.25_{(10)}$
+        2.25_{(10)}\)
 \end{itemize}
 \end{frame}
 
@@ -168,14 +176,14 @@ Ejemplos:
 
     \item Se convierte la parte entera a binario.
 
-    \item La parte fraccionaria se multiplica por 2 y se toma la parte entera del resultado. Este dígito
-        binario se agrega al resultado final.
+    \item La parte fraccionaria se multiplica por 2 y se toma la parte entera
+        del resultado. Este dígito binario se agrega al resultado final.
 
-    \item Se repite el paso $3$ con la nueva parte fraccionaria obtenida, hasta que ésta sea 0, o hasta
-        lograr la precisión deseada.
+    \item Se repite el paso \(3\) con la nueva parte fraccionaria obtenida,
+        hasta que ésta sea 0, o hasta lograr la precisión deseada.
 
-    \item La parte entera de cada uno de los resultados del paso $4$, forman los dígitos del número en la
-        base en orden de izquierda a derecha.
+    \item La parte entera de cada uno de los resultados del paso \(4\), forman
+        los dígitos del número en la base en orden de izquierda a derecha.
 
     \item Sumamos la parte entera a la parte fraccionaria.
 
@@ -184,71 +192,83 @@ Ejemplos:
 
 \begin{frame}{Conversión de decimal a binario}
 
-    Ejemplo: Convertir el número $3.625_{(10)}$ a base 2.
+    Ejemplo: Convertir el número \(3.625_{(10)}\) a base 2.
 
 \begin{enumerate}
-\item Separamos parte entera (3) y parte fraccionaria ($0.625$).
+    \item Separamos parte entera (3) y parte fraccionaria (\(0.625\)).
 
-\item La parte entera se convierte a base 2 como entero sin signo (utilizando el método de la división)
-    dando $11_{(2)}$.\pause
+\item La parte entera se convierte a base 2 como entero sin signo (utilizando
+    el método de la división) dando \(11_{(2)}\).\pause
 
 \item Expresamos la parte fraccionaria:
 
     \begin{enumerate}
 
-    \item Multiplicamos la parte fraccionaria hasta obtener cero o una precisión de 5 dígitos:
+    \item Multiplicamos la parte fraccionaria hasta obtener cero o una
+        precisión de 5 dígitos:
         \pause
         \begin{tabular}[t]{ l r }
 
-            $0.625{\times}2$ & = $1.25$\\\pause
+            \(0.625{\times}2\) & = \(1.25\)\\\pause
 
-            $0.25{\times}2$ & = $0.5$\\\pause
+            \(0.25{\times}2\) & = \(0.5\)\\\pause
 
-            $0.5{\times}2$ & = $1.0$\\
+            \(0.5{\times}2\) & = \(1.0\)\\
 
         \end{tabular}\pause
 
-    \item La parte fraccionaria es $0.101$.
+    \item La parte fraccionaria es \(0.101\).
 
     \end{enumerate}\pause
 
-    \item $3.625_{(10)}=11_{(2)} + 0.101_{(2)} = 11.101_{(2)}$
+\item \(3.625_{(10)}=11_{(2)} + 0.101_{(2)} = 11.101_{(2)}\)
 
 \end{enumerate}
 \end{frame}
 
+\begin{frame}{Representación de racionales en \textbf{bits}}
+
+    ¿Cómo podemos representar los números racionales en la computadora?
+
+    Veremos dos sistemas de representación:
+\begin{itemize}
+    \item Punto fijo.
+    \item Punto flotante (\emph{minifloat}).
+\end{itemize}
+\end{frame}
+
 \begin{frame}{Representación de Punto Fijo \emph{(n,k)}}
 \begin{itemize}
-    \item Se define una cantidad fija $(n-k)$ de \textbf{bits} para la parte
-        entera y $k$ \textbf{bits} para la parte fraccionaria.
+    \item Se define una cantidad fija \((n-k)\) de \textbf{bits} para la parte
+        entera y \(k\) \textbf{bits} para la parte fraccionaria.
     \item La computadora puede tratar aritméticamente a todos los números como
         si fueran enteros.
     \item Conversión de decimal a Punto Fijo \emph{(n,k)}:
     \begin{enumerate}
         \item Obtener la representación binaria del valor absoluto del número,
             con una precisión de \emph{k}.
-        \item Expresar la parte entera y fraccionaria en la cantidad adecuada de
-            \textbf{bits}. Si es necesario completar con ceros, a la izquierda
-            para la parte entera, y a la derecha en la fraccionaria.
-        \item Si el número es negativo, aplicar la operación de complemento a
-            2.
+        \item Expresar la parte entera y fraccionaria en la cantidad adecuada
+            de \textbf{bits}. Si es necesario completar con ceros, a la
+            izquierda para la parte entera, y a la derecha en la fraccionaria.
+        \item Si el número es negativo, aplicar la operación de complemento
+            como si fuera un número representado en \emph{Complemento a 2}.
     \end{enumerate}
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Conversión de decimal a Punto Fijo \emph{(n,k)}}
 
-    Ejemplo, representar $-7,33$ en Punto fijo \emph{(8,4)}:\pause
+    Ejemplo, representar \(-7,33\) en Punto fijo \emph{(8,4)}:\pause
 
     \begin{enumerate}
-        \item $|-7,33_{(10)}| \simeq 111.0101_{(2)}$, con una precisión de
+        \item \(|-7,33_{(10)}| \simeq 111.0101_{(2)}\), con una precisión de
             \emph{k}.
             \pause
         \item Expresamos el número en 4\bit{} para la para la parte entera, y
-            4\bit{} para la parte fraccionaria: $01110101$
+            4\bit{} para la parte fraccionaria: \(01110101\)
             \pause
         \item Como el número es negativo, aplicamos la operación de \emph{C2}:
-            $C2(01110101) = 10001011 \simeq -7,33_{(10)}$
+            \(C2(01110101) = 10001011 \simeq -7,33_{(10)}\)
     \end{enumerate}
 \end{frame}
 
@@ -257,7 +277,6 @@ Ejemplos:
     \item Adecuada para problemas con datos de magnitudes y precisiones
         similares.
     \item Aplicada en sistemas de tiempo real.
-    \item Sistemas donde es importante la velocidad de cómputo, como juegos.
     \item Sistemas empotrados o embebidos con procesadores de recursos
         limitados.
 \end{itemize}
@@ -266,8 +285,9 @@ Ejemplos:
 \begin{frame}{Representación de fraccionarios}
 \framesubtitle{Truncamiento}
 
-    ¿Qué pasa si no es suficiente la cantidad de bits que tenemos para la parte fraccionaria?
-        ¿Es realmente $1000\,1011 = -7,33_{(10)}$ con \emph{PF(8,4)}?
+    ¿Qué pasa si no es suficiente la cantidad de bits que tenemos para la
+    parte fraccionaria?  ¿Es realmente \(1000\,1011 = -7,33_{(10)}\) con
+    \emph{PF(8,4)}?
     \pause
 
     \textbf{El número almacenado será una aproximación al número original.}
@@ -286,17 +306,17 @@ Ejemplos:
     \pause
     \item \small Por ejemplo, si se necesita calcular el tiempo en que la luz
         recorre una millonésima de milímetro, la fórmula relacionará la
-        velocidad de la luz en $\frac{m}{s}$ (unos $300\,000\,000
-        \frac{m}{s}$) con el tamaño en metros de un nanómetro ($0.000000001
-        m$).
+        velocidad de la luz en \(\frac{m}{s}\) (unos \(300\,000\,000
+        \frac{m}{s}\)) con el tamaño en metros de un nanómetro (\(0.000000001
+        m\)).
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Notación Científica}
 \begin{itemize}
     \item Los números se expresan en una forma estandarizada que consiste de
-        un coeficiente y una mantisa multiplicada por una potencia de 10: $m
-        \times 10^{x}$
+        un coeficiente y una mantisa multiplicada por una potencia de 10: \(m
+        \times 10^{x}\)
 \pause
 
 \begin{equation*}
@@ -326,20 +346,23 @@ Ejemplos:
     \item El coeficiente \textit{m} debe ser un valor mayor o igual que 1 y
         menor que 10.
     \pause
-\item Ejemplo: $t = 0,\overline{3} \times 10^{-17}s\pause
-    = 3,\overline{3} \times 10^{-18} s$
+\item Ejemplo: \(t = 0,\overline{3} \times 10^{-17}s
+    = 3,\overline{3} \times 10^{-18} s\)
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Representación en Punto Flotante}
-\framesubtitle{\emph{MiniFloat}}
 
 Formato que utiliza la notación científica normalizada:
 
 \begin{itemize}
     \item Se utiliza 1\bit{} para el signo.
-    \item Se utilizan $n$\bit{} para el exponente en exceso a $2^{n-1}-1$.
-    \item Se utilizan $k$\bit{} para la mantisa (parte decimal del número).
+    \item Se utilizan \(n\)\bit{} para el exponente en exceso a \(2^{n-1}-1\).
+    \item Se utilizan \(k\)\bit{} para la mantisa (parte decimal del número).
+    \item El formato \emph{IEEE 754}, definido por la \emph{IEEE}
+        (\emph{Institute of Electrical and Electronics Engineers}), define
+        versiones de precisión media (16\bit{}), simple (32\bit{}), doble
+        (64\bit{}), y cuádruple (128\bit{}), y óctuple (256\bit{}).
 \end{itemize}
 
 \end{frame}
@@ -351,8 +374,8 @@ Una versión didáctica del formato:
 
 \begin{itemize}
     \item Se utiliza 1\bit{} para el signo.
-    \item Se utilizan $4$\bit{} para el exponente en exceso a $7$.
-    \item Se utilizan $3$\bit{} para la mantisa.
+    \item Se utilizan \(4\)\bit{} para el exponente en exceso a \(7\).
+    \item Se utilizan \(3\)\bit{} para la mantisa.
 \end{itemize}
 
     \begin{figure}
@@ -361,11 +384,13 @@ Una versión didáctica del formato:
     \captionsetup{labelformat=empty}
     \caption{}
     \end{figure}
+
 \end{frame}
 
 \begin{frame}{Conversión de decimal a punto flotante}
 \begin{enumerate}
-    \item Separar el signo y escribir el valor absoluto de \textit{n} en base 2.
+    \item Separar el signo y escribir el valor absoluto de \textit{n} en base
+        2.
     \item Escribir el resultado en notación científica normalizada.
     \item Expresar el exponente obtenido en el paso anterior, en exceso.
     \item El coeficiente calculado se guarda sin su parte entera en la parte
@@ -375,18 +400,19 @@ Una versión didáctica del formato:
 
 \begin{frame}{Conversión de decimal a punto flotante}
 
-\textbf{Ejemplo:} Expresar el decimal $-5,5$ en \emph{MiniFloat}.
+    \textbf{Ejemplo:} Expresar el decimal \(-5,5\) en \emph{MiniFloat}.
 
 \begin{itemize}
     \item Necesitamos averiguar \textit{s}, \textit{e} y \textit{m}.
     \pause
-    \item \textit{n} es negativo, luego $s = 1$. \pause
-    \item El valor absoluto en binario es: $101,1$. \pause
-    \item Normalizado: $1,011 \times 2^2$  por lo que la mantisa es $m=011$.
+\item \textit{n} es negativo, luego \(s = 1\). \pause
+\item El valor absoluto en binario es: \(101,1\). \pause
+\item Normalizado: \(1,011 \times 2^2\)  por lo que la mantisa es \(m=011\).
         \pause
-    \item El exponente se representa en exceso a 7: $e = 2 + 7 = 9 = 1001_{2}$
+    \item El exponente se representa en exceso a 7: \(e = 2 + 7 = 9 =
+        1001_{2}\)
         \pause
-    \item Resultado Final: $1100\,1011$. En hexadecimal \textbf{CB}.
+    \item Resultado Final: \(1100\,1011\). En hexadecimal \textbf{0xCB}.
 \end{itemize}
 \end{frame}
 
@@ -398,10 +424,10 @@ Una versión didáctica del formato:
 \begin{itemize}
     \item Necesitamos averiguar \textit{s}, \textit{e} y \textit{m}.
     \pause
-    \item Convertimos el hexadecimal a binario: $\mathtt{5C}_{(16)} =
-        0101\,1100$. \pause
-    \item Recuperando los valores:$s = 0$, $e = 1011_{(2)} = 11_{(10)}$,
-        $m = 0.100$. \pause
+\item Convertimos el hexadecimal a binario: \(\mathtt{5C}_{(16)} =
+    0101\,1100\). \pause
+\item Recuperando los valores:\(s = 0\), \(e = 1011_{(2)} = 11_{(10)}\),
+    \(m = 0.100\). \pause
     \item Remplazamos los valores en la siguiente formula:
     \begin{equation*}
     \begin{aligned}
@@ -429,7 +455,59 @@ Una versión didáctica del formato:
 \end{itemize} \pause
 
 A pesar del incremento en la precisión, aun puede causar problemas: ¿Cuánto
-    es $0.2 + 0.3$? (ver en la consola con \texttt{python3})
+    es \(0.2 + 0.1\)? (ver en la consola con \texttt{python3}) \pause
+
+    \begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/floaterror.pdf}
+    \captionsetup{labelformat=empty}
+    \caption{}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{Representación de fraccionarios}
+\framesubtitle{Truncamiento}
+
+    En \emph{punto flotante}, igual que con \emph{punto fijo}, se pueden
+    producir errores de truncamiento.
+
+    Si quisiéramos conocer de \textbf{cuánto} es ese error, deberíamos
+    calcular la diferencia entre el número que queremos representar, y el
+    número representado por la computadora.
+    \pause
+
+    Ejemplo:
+
+    Al intentar representar \(0.1\) en \emph{minifloat} obtenemos como
+    resultado \textbf{0x1C}. Pero al convertirlo de vuelta a decimal obtenemos
+    como resultado \(0.09375\).
+
+    Como \(0.1 - 0.09375 = 0.00625\), entonce el error de truncamiento es
+    \(0.00625\).
+
+\end{frame}
+
+\begin{frame}{Números representables en \emph{Punto Fijo} y \emph{Punto
+    flotante}}
+
+    Comparemos los números representables entre \emph{minifloat} y
+    \emph{PF(8,2)} ¿Tendrán el mismo rango? ¿Cuál sera más preciso?
+    \pause
+
+    \begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/rectaMinifloat.pdf}
+    \captionsetup{labelformat=empty}
+    \caption{Números representables con \emph{minifloat}.}
+    \end{figure}
+
+    \begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/rectaPuntoFijo.pdf}
+    \captionsetup{labelformat=empty}
+    \caption{Números representables con \emph{Punto Fijo (8,2)}.}
+    \end{figure}
 
 \end{frame}
 
